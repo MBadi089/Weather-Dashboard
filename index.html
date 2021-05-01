@@ -8,9 +8,88 @@
     <link rel="stylesheet" href="assests/css/style.css">
 </head>
 <body>
-<h1>Weather Dashboard</h1>
-<input class="city-name" type="text" placeholder="Enter City Name">
+<!----------------------------Header section------------------------------>  
+<header>
+  <h1>Weather Dashboard</h1>
+</header>
+<!-------------------------End of Header section-------------------------->
 
+<!---------------------------Search Box section---------------------------> 
+<section class="search-box-container">
+    <h1>Search for a City:</h1>
+    <input id="userInput" type="text" class="form" placeholder="Enter City Name">
+    <button class ="btn" type="button" id="searchBtn">Search</button>
+</section>
+<!-----------------------End of Search Box section------------------------>
+
+
+<!--------------------------Display CityAPI section----------------------->
+<section class="displayAPI-container">
+  <div class ="row">
+      <div class="currentDayWeatherAPI" id="cityWeatherAPI">
+        <h3 id="city">City: </h3> 
+        <ul>
+          <li id="temp">Temp: </li>
+          <li id="wind">Wind: </li>
+          <li id="humidity">Humidity: </li>
+          <li id="uvIndex">UV Index: </li>
+        </ul>
+    </div>
+  </div>
+<!---------------------End of Display CityAPI section---------------->
+
+<!----------------------Displays The 5-day Forcast------------------->  
+<div class="row">
+  <h2 id ="cityFiveDayForecast">5-Day Forecast:</h2>
+  <div class ="column">
+    <div class="nextDayForcastAPI" id="date nextDayForcastAPI-1">
+      <ul>
+        <li id="nextDayTemp">Temp: </li>
+        <li id="nextDayWind">Wind: </li>
+        <li id="nextDayHumidity">Humidity: </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class ="column">
+    <div class="nextDayForcast" id="date nextDayForcastAPI-2">
+      <ul>
+        <li id="nextDayTemp">Temp: </li>
+        <li id="nextDayWind">Wind: </li>
+        <li id="nextDayHumidity">Humidity: </li>
+      </ul>
+    </div>
+  </div>
+  <div class ="column">
+    <div class="date nextDayForcast" id="date nextDayForcastAPI-3">
+      <ul>
+        <li id="nextDayTemp">Temp: </li>
+        <li id="nextDayWind">Wind: </li>
+        <li id="nextDayHumidity">Humidity: </li>
+      </ul>
+    </div>
+  </div>
+  <div class ="column">
+    <div class="date nextDayForcast" id="date nextdayForcastAPI-4">
+      <ul>
+        <li id="nextDayTemp">Temp: </li>
+        <li id="nextDayWind">Wind: </li>
+        <li id="nextDayHumidity">Humidity: </li>
+      </ul>
+    </div>
+  </div>
+  <div class ="column">
+    <div class="date nextDayForcast" id ="date nextDayForcastAPI-5">
+      <ul>
+        <li id="nextDayTemp">Temp: </li>
+        <li id="nextDayWind">Wind: </li>
+        <li id="nextDayHumidity">Humidity: </li>
+      </ul>
+    </div>
+  </div>
+<!------------------End of Displays The 5-day Forcast--------------->  
+</section>
+<!-----------------------End of Display Api section----------------------->
   <script src="assests/js/script.js"></script>  
 </body>
 </html>

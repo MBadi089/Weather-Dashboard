@@ -1,3 +1,36 @@
-body {
+header {
+    text-align: center;
     background-color: lightblue;
+    padding: 15px 20px;
 }
+/*---------------------Search Box Section---------------------*/
+.search-box-container {
+    background-color: lightgrey;
+    padding: 20px 30px;  
+}
+
+/* targets the user's input in the search box */
+input {
+    width: 15%;
+    padding: 10px 15px;
+    margin: 8px 0;
+    display: block;
+    border-radius: 4px;
+}
+/*targets the search button and styles it */
+button {
+    width: 17%;
+    padding: 10px 20px;
+    margin: 8px 0;
+    display: block;
+    border-radius: 4px;
+    background-color: skyblue;
+}
+/*-------------------End of Search Box Section-----------------*/
+
+
+/*----------------------Display API Section--------------------*/
+ul li {
+    list-style: none;
+}
+/*-------------------End of Display API Section----------------*/
