@@ -24,6 +24,7 @@ const apiKey ="40673f276cf44bc5a316f589061aceb6";
 //----------------------getCityInput Section-----------------------//
 //This function will get the user's choice of city to search for    
     function getCityInput() {
+    saveUserInput();    
     cityInput = document.querySelector("#userInput").value;
 
 //First API fetch to get the current day weather from user's input
@@ -46,8 +47,8 @@ const apiKey ="40673f276cf44bc5a316f589061aceb6";
      wind = document.querySelector("#wind").innerHTML='Wind: '+ data.wind.speed;
      humidity = document.querySelector("#humidity").innerHTML='Humidity: '+ data.main.humidity;
 
- //Second API fetch, this is to get the UV Index and the five day forecast
-     fetch("https://api.openweathermap.org/data/2.5/onecall?lat=" + cityLatitude +"&lon=" + cityLongitude + "&appid=" + apiKey )
+ //Second API fetch, this is to get the UV Index and the five day forecast and added &units=imperial at the end of the api to convert kelvin to fahrenheit
+     fetch("https://api.openweathermap.org/data/2.5/onecall?lat=" + cityLatitude +"&lon=" + cityLongitude + "&appid=" + apiKey + "&units=imperial" )
        .then(function(response) {
          return response.json();
        })
@@ -59,8 +60,6 @@ const apiKey ="40673f276cf44bc5a316f589061aceb6";
         //this will target the 5 day forecast through a loop
         for (var i = 1; i < 6; i++) {
           var icon = data.daily[i].weather[0].icon;
-
-          //fiveDayTemperature = (Math.round(data.daily[i].temp.day - 273.15) * 9 / 5 + 32);
 
           var cityFiveDayForecast = document.createElement("div");
           var fiveDayTemperature = document.createElement("p");
@@ -74,7 +73,6 @@ const apiKey ="40673f276cf44bc5a316f589061aceb6";
           cityFiveDayForecast.appendChild(fiveDayWind);
           cityFiveDayForecast.appendChild(fiveDayHumidity);
           document.getElementById("storeForecast").appendChild(cityFiveDayForecast);
-
             
          }
        });   
@@ -86,6 +84,9 @@ const apiKey ="40673f276cf44bc5a316f589061aceb6";
 //----------------------saveUserInput Section-----------------------//
 //This will save the users input with localStorage
 function saveUserInput() {
-
+    //setItem saves the data
+    localStorage.setItem("userInput", cityInput);
+    //getItem reads the item
+    localStorage.getItem("userInput");
 }
 //-------------------End of saveUserInput Section-------------------//
