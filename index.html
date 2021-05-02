@@ -11,6 +11,7 @@
 <!----------------------------Header section------------------------------>  
 <header>
   <h1>Weather Dashboard</h1>
+  <p>This app will help you search for cities and get their weather forecast</p>
 </header>
 <!-------------------------End of Header section-------------------------->
 
@@ -25,7 +26,7 @@
 
 <!--------------------------Display CityAPI section----------------------->
 <section class="displayAPI-container">
-  <div class ="row">
+  <!-- <div class ="row"> -->
       <div class="currentDayWeatherAPI" id="cityWeatherAPI">
         <h3 id="city">City: </h3> 
         <ul>
@@ -35,61 +36,25 @@
           <li id="uvIndex">UV Index: </li>
         </ul>
     </div>
-  </div>
+  <!-- </div> -->
+</section>
 <!---------------------End of Display CityAPI section---------------->
 
 <!----------------------Displays The 5-day Forcast------------------->  
-<div class="row">
-  <h2 id ="cityFiveDayForecast">5-Day Forecast:</h2>
-  <div class ="column">
-    <div class="nextDayForcastAPI" id="date nextDayForcastAPI-1">
-      <ul>
-        <li id="nextDayTemp">Temp: </li>
-        <li id="nextDayWind">Wind: </li>
-        <li id="nextDayHumidity">Humidity: </li>
-      </ul>
-    </div>
-  </div>
-</div>
-<div class ="column">
-    <div class="nextDayForcast" id="date nextDayForcastAPI-2">
-      <ul>
-        <li id="nextDayTemp">Temp: </li>
-        <li id="nextDayWind">Wind: </li>
-        <li id="nextDayHumidity">Humidity: </li>
-      </ul>
-    </div>
-  </div>
-  <div class ="column">
-    <div class="date nextDayForcast" id="date nextDayForcastAPI-3">
-      <ul>
-        <li id="nextDayTemp">Temp: </li>
-        <li id="nextDayWind">Wind: </li>
-        <li id="nextDayHumidity">Humidity: </li>
-      </ul>
-    </div>
-  </div>
-  <div class ="column">
-    <div class="date nextDayForcast" id="date nextdayForcastAPI-4">
-      <ul>
-        <li id="nextDayTemp">Temp: </li>
-        <li id="nextDayWind">Wind: </li>
-        <li id="nextDayHumidity">Humidity: </li>
-      </ul>
-    </div>
-  </div>
-  <div class ="column">
-    <div class="date nextDayForcast" id ="date nextDayForcastAPI-5">
-      <ul>
-        <li id="nextDayTemp">Temp: </li>
-        <li id="nextDayWind">Wind: </li>
-        <li id="nextDayHumidity">Humidity: </li>
-      </ul>
-    </div>
-  </div>
+<section class ="cityFiveDayForecast">
+ <div class="row">
+  <h2 id="cityFiveDayForecast">5-Day Forecast:</h2>
+ </div> 
+<!--Here displays the five day forecast by looping the five days
+in javascript-->
+ <div id="storeForecast">
+
+ </div>
+  </section>
 <!------------------End of Displays The 5-day Forcast--------------->  
-</section>
+
 <!-----------------------End of Display Api section----------------------->
-  <script src="assests/js/script.js"></script>  
+  <script src="assests/js/script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>  
 </body>
 </html>
